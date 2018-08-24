@@ -5,6 +5,56 @@
 <meta name="description" content="Ejercicio Pagina Web">
 <meta name="author" content="Ricardo Hernandez 1098814">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script >
+	 function hora(){
+	var hora = new Date();
+	var hrs = hora.getHours();
+	var min = hora.getMinutes();
+	document.write(hrs + ":" + min);	
+	}
+	
+</script>
 </head>
 
+<body>
+
+<h1>Datos curiosos</h1>                         
+<p>La hora de entrada al sitio es: <mark><script>hora();</script></mark></p> 
+
+<section>
+	<div align="center"><p>Datos curiosos de Guatemala </p>
+	<meter value="8" min="0" max="10">4 out of 5</meter><br>
+	<br><img src="images/guatemala.jpg" alt="Antigua Guatemala" style="width:500px;height:200px;"></div>
+</section>
+
+<article>
+	<section>
+		<h2>El nombre de Guate</h2>
+		Sabias que el nombre de Guatemala, proviene de la lengua Náhualtl, la cual se traduciria a <i>Quuahtlemallan</i> que significa "lugar de muchos arboles", nombre que asienta perfectamente debido a la gran cantidad de bosques
+	    con los que cuenta el país
+	</section>
+	
+	<section>
+		<h2>Division del pais</h2>
+	     El pais se divide en 22 deparatamentos y tres relieves, la primera es la regíon de Petén, las Tierras Altas de la región central y la region del sur, además se divide en ocho areas metropolitanas, las cuales son: 
+		 <ul>
+			<li><b>Metropolitana</b></li>
+			<li><b>Norte</b></li>
+			<li><b>Nororiental</b></li>
+			<li><b>Suroriental</b></li>
+			<li><b>Central</b></li>
+			<li><b>Suroccidental</b></li>
+			<li><b>Noroccidental</b></li>
+			<li><b>Petén</b></li>
+	</section>
+</article>
+	
+<footer>
+	<p>Created by: Ricardo Hernandez
+	<br>Carnet: 1098814</p>
+</footer>
+
+
+</body>
 </html>
