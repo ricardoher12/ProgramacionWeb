@@ -6,6 +6,7 @@
 	<meta name="author" content="Ricardo Hernandez 1098814">
 	<meta name="keywords" content="Datos Interesantes,facts,Guatemala,interesantes,datos">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/estilos.css"/>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <script type="text/javascript">
@@ -16,21 +17,71 @@
 	document.write(hrs + ":" + min);	
 	}
 	
+	function CambioTexto(){ 
+var e=document.getElementsByTagName("p"); 
+var x=document.getElementById("change"); 
+for (var i = 0; i < e.length; i++){ 
+if (x.options[x.selectedIndex].text=="elige"){return false} 
+e[i].style.fontSize=x.options[x.selectedIndex].text+"px"; 
+e[i].style.fontFamily="Arial"; 
+e[i].style.color="#ff0000"; 
+} 
+} 
 	
 function showDetails(area){
 	var areaType = area.getAttribute("data-cant-dep");
 	alert("La cantidad de departamentos del area " + area.innerHTML + " es: " + areaType);
 	
 	}
+	
+function cambiarTamaño()
+{
+	var body = document.getElementById("body");
+	if($("#body").hasClass("tamaño"))
+	{
+		$("#body").removeClass("tamaño");
+	}
+	else
+	{
+		$("#body").addClass("tamaño")
+	}
+}
 
-	 function fondo(color) {
-		console.log(color.value);
+function cambiarLetra()
+{
+
+	var body = document.getElementById("body");
+	if($("#body").hasClass("italic"))
+	{
+		$("#body").removeClass("italic");
+	}
+	else
+	{
+		$("#body").addClass("italic");
+	}
+}
+
+function fondo(color) {
+	console.log(color.value);
 		
 		var body = document.getElementById("body");
 		body.style.backgroundColor = color.value;
-		var cont = document.getElementById("cont");
-		cont.style.fontSize=20;
+		
 	 } 
+	 
+function colorLetra ()
+{
+	var body = document.getElementById("body");
+	if($("#body").hasClass("col"))
+	{
+		$("#body").removeClass("col");
+	}
+	else
+	{
+		$("#body").addClass("col");
+	}
+
+}
 </script>
 </head>
 
@@ -142,13 +193,19 @@ function showDetails(area){
 			</article>
 		</div>
 	</section>
+	<section>
+		<br><div class="btn-group">
+			<button type="button" class="btn btn-danger" onclick="fondo(this)" value="red">Rojo</button>
+			<button type="button" class="btn btn-default" onclick="fondo(this)" value="white">Blanco</button>
+			<button type="button" class="btn btn-default" onclick="cambiarTamaño()" >Cambiar Tamaño</button>
+			<button type="button" class="btn btn-default" onclick="cambiarLetra()">Cursiva</button>
+			<button type="button" class="btn btn-default" onclick="colorLetra()">Color de la letra</button>
+		</div>		
+	</section>
 </div>
 		
 
-<button onclick="fondo(this)" value="red">Click me</button>
-		
 <footer>
-	
 	<br><br><p>Created by: Ricardo Hernandez
 	<br>Carnet: 1098814</p>
 </footer>
