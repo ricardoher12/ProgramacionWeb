@@ -9,3 +9,12 @@ font-size: 16px;
 .col {
 	color:  blue;
 }
+
+.fondo{
+	background-image: url("images/fondo.jpg");
+}
+
+.colorFondo{
+	
+	background-color: red;
+}

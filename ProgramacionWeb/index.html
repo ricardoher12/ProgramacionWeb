@@ -61,11 +61,15 @@ function cambiarLetra()
 	}
 }
 
-function fondo(color) {
-	console.log(color.value);
-		
-		var body = document.getElementById("body");
-		body.style.backgroundColor = color.value;
+function fondo() {
+	if($("#body").hasClass("colorFondo"))
+	{
+		$("#body").removeClass("colorFondo");
+	}
+	else
+	{
+		$("#body").addClass("colorFondo");
+	}
 		
 	 } 
 	 
@@ -79,6 +83,19 @@ function colorLetra ()
 	else
 	{
 		$("#body").addClass("col");
+	}
+
+}
+
+function imagenFondo()
+{
+if($("#body").hasClass("fondo"))
+	{
+		$("#body").removeClass("fondo");
+	}
+	else
+	{
+		$("#body").addClass("fondo");
 	}
 
 }
@@ -151,7 +168,7 @@ function colorLetra ()
 		</div>
 		<div class="col-md-9">
 			<h3>Idiomas del país</h3>
-			<p style="color:dodgerblue">El idioma oficial de Guatemala es el español, sin embargo cuenta con una diversidad de idiomas que se hablan
+			<p>El idioma oficial de Guatemala es el español, sin embargo cuenta con una diversidad de idiomas que se hablan
 			alrdedor del pais, los cuales llegan a ser aproximadamente 25. Dentro de los mas famosos estan <b>Xinca</b>, <b>garifuna</b> y <b>mam</b></p>
 		</div>
 		</article>
@@ -195,8 +212,8 @@ function colorLetra ()
 	</section>
 	<section>
 		<br><div class="btn-group">
-			<button type="button" class="btn btn-danger" onclick="fondo(this)" value="red">Rojo</button>
-			<button type="button" class="btn btn-default" onclick="fondo(this)" value="white">Blanco</button>
+			<button type="button" class="btn btn-danger" onclick="fondo()" value="red">Rojo</button>
+			<button type="button" class="btn btn-default" onclick="imagenFondo()" value="white">Fondo de pantalla</button>
 			<button type="button" class="btn btn-default" onclick="cambiarTamaño()" >Cambiar Tamaño</button>
 			<button type="button" class="btn btn-default" onclick="cambiarLetra()">Cursiva</button>
 			<button type="button" class="btn btn-default" onclick="colorLetra()">Color de la letra</button>
