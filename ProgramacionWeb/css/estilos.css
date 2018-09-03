@@ -1,0 +1,20 @@
+.tamaño{
+font-size: 16px;
+}
+
+.italic{
+	font-style: italic;
+}
+
+.col {
+	color:  blue;
+}
+
+.fondo{
+	background-image: url("images/fondo.jpg");
+}
+
+.colorFondo{
+	
+	background-color: red;
+}
